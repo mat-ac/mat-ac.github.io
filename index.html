@@ -83,7 +83,23 @@
     <h1>馬研究室</h1>
     <h2>長崎大学環境科学部</h2>
 
-    <a href="#" class="book-button">教 育</a>
+    <a href="javascript:void(0);" class="book-button" onclick="toggleEducation()">教育</a>
+
+<div id="education-content" style="display: none; margin-left: 2em; margin-top: 1em; font-family: 'Hiragino Kaku Gothic Pro', 'Hiragino Sans', sans-serif;">
+  <h3 style="margin: 0;">担当授業</h3>
+  <ul>
+    <li>環境経済学入門</li>
+    <li>環境と経済</li>
+    <li>持続可能な開発</li>
+  </ul>
+</div>
+
+<script>
+  function toggleEducation() {
+    const edu = document.getElementById("education-content");
+    edu.style.display = edu.style.display === "none" ? "block" : "none";
+  }
+</script>
 
 <style>
   .book-button {
