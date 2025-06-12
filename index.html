@@ -1,126 +1,136 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>TENG MA</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-      }
+<head>
+  <meta charset="utf-8">
+  <title>TENG MA</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
 
-      h1, h2 {
-        margin: 0;
-        padding: 0;
-      }
+    h1, h2 {
+      margin: 0;
+      padding: 0;
+    }
 
-      h1 {
-        font-size: 3em;
-        color: #000000;
-        text-align: left;
-        margin-top: 2em;
-        margin-left: 1em;
-        font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
-      }
+    h1 {
+      font-size: 3em;
+      color: #000000;
+      text-align: left;
+      margin-top: 2em;
+      margin-left: 1em;
+      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+    }
 
-      h2 {
-        font-size: 1.5em;
-        color: #000000;
-        margin-left: 2em;
-        font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
-      }
+    h2 {
+      font-size: 1.5em;
+      color: #000000;
+      margin-left: 2em;
+      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+    }
 
-      .top-right {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        font-size: 1.2em;
-        font-family: Arial, sans-serif;
-      }
+    .top-right {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 1.2em;
+    }
 
-      .top-right a {
-        text-decoration: none;
-        color: black;
-        padding: 6px 10px;
-        background-color: white;
-      }
+    .top-right a {
+      text-decoration: none;
+      color: black;
+      padding: 6px 10px;
+      background-color: white;
+    }
 
-      .top-right a:hover {
-        background-color: white;
-      }
+    .top-right a:hover {
+      background-color: white;
+    }
 
-      .button-container {
-        display: flex;
-        gap: 1.5em;
-        margin-left: 2em;
-        margin-top: 1em;
-      }
+    .button-container {
+      display: flex;
+      gap: 1.5em;
+      margin-left: 2em;
+      margin-top: 1em;
+    }
 
-      .book-button {
-        padding: 10px 20px 6px 20px;
-        background-color: white;
-        color: #000000;
-        text-decoration: none;
-        font-size: 1.5em;
-        font-weight: bold;
-        font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
-        transition: all 0.3s ease;
-        border: none;
-        border-bottom: 2pt solid transparent;
-        line-height: 1.2;
-      }
+    .book-button {
+      padding: 10px 20px 6px 20px;
+      background-color: white;
+      color: #000000;
+      text-decoration: none;
+      font-size: 1.5em;
+      font-weight: bold;
+      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+      transition: all 0.3s ease;
+      border: none;
+      border-bottom: 2pt solid transparent;
+      line-height: 1.2;
+    }
 
-      .book-button:hover {
-        border-bottom: 2pt solid black;
-      }
+    .book-button:hover {
+      border-bottom: 2pt solid black;
+    }
 
-      .education-box {
-        display: none;
-        margin-left: 2em;
-        margin-top: 1em;
-        font-family: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
-      }
+    .content-box {
+      display: none;
+      margin-left: 2em;
+      margin-top: 1em;
+      font-family: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
+    }
 
-      .education-box h3 {
-        margin: 0 0 0.5em 0;
-        font-size: 1.2em;
-      }
-    </style>
-  </head>
-  <body>
+    .content-box h3 {
+      margin: 0 0 0.5em 0;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
 
-    <div class="top-right">
-      <a href="#">ABOUT</a>
-      <a href="#">CONTACT ME</a>
-    </div>
+  <div class="top-right">
+    <a href="#">ABOUT</a>
+    <a href="#">CONTACT ME</a>
+  </div>
 
-    <h1>馬研究室</h1>
-    <h2>長崎大学環境科学部</h2>
+  <h1>馬研究室</h1>
+  <h2>長崎大学環境科学部</h2>
 
-    <div class="button-container">
-      <a href="javascript:void(0);" class="book-button" onclick="toggleEducation()">教育</a>
-      <a href="#" class="book-button">研究</a>
-      <a href="#" class="book-button">ゼミ</a>
-    </div>
+  <div class="button-container">
+    <a href="javascript:void(0);" class="book-button" onclick="toggleSection('education')">教育</a>
+    <a href="javascript:void(0);" class="book-button" onclick="toggleSection('study')">研究</a>
+    <a href="#" class="book-button">ゼミ</a>
+  </div>
 
-    <div id="education-content" class="education-box">
-      <h3>担当授業</h3>
-      <ul>
-        <li>環境経済学II</li>
-        <li>環境経済学特講II</li>
-        <li>環境経済学特論</li>
-      </ul>
-    </div>
+  <div id="education-content" class="content-box">
+    <h3>担当授業</h3>
+    <ul>
+      <li>環境経済学II</li>
+      <li>環境経済学特講II</li>
+      <li>環境経済学特論</li>
+    </ul>
+  </div>
 
-    <script>
-      function toggleEducation() {
-        const edu = document.getElementById("education-content");
-        edu.style.display = edu.style.display === "none" ? "block" : "none";
-      }
-    </script>
+  <div id="study-content" class="content-box">
+    <h3>研究活動</h3>
+    <p>再生可能エネルギー、電力市場、環境政策、排出権取引</p>
+  </div>
 
-  </body>
+  <script>
+    function toggleSection(section) {
+      const sections = ['education', 'study'];
+      sections.forEach(s => {
+        const el = document.getElementById(s + '-content');
+        if (s === section) {
+          el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
 </html>
-
 
