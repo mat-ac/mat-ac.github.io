@@ -44,32 +44,47 @@
         color: black;
         padding: 6px 10px;
         background-color: white;
-        border-radius: 6px;
       }
 
       .top-right a:hover {
-        background-color: white; /* 保持白色 */
+        background-color: white;
+      }
+
+      .button-container {
+        display: flex;
+        gap: 1.5em;
+        margin-left: 2em;
+        margin-top: 1em;
       }
 
       .book-button {
-        display: inline-block;
-        padding: 10px 20px;
-        margin-left: 2em;
+        padding: 10px 20px 6px 20px;
         background-color: white;
         color: #000000;
         text-decoration: none;
-        border-radius: 6px;
-        font-size: 1em;
+        font-size: 1.5em;
         font-weight: bold;
         font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
-        transition: none; /* 取消背景渐变 */
+        transition: all 0.3s ease;
+        border: none;
+        border-bottom: 2pt solid transparent;
+        line-height: 1.2;
       }
 
-      .book-button:hover,
-      .book-button:active,
-      .book-button:focus {
-        background-color: white;
-        color: #000000;
+      .book-button:hover {
+        border-bottom: 2pt solid black;
+      }
+
+      .education-box {
+        display: none;
+        margin-left: 2em;
+        margin-top: 1em;
+        font-family: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
+      }
+
+      .education-box h3 {
+        margin: 0 0 0.5em 0;
+        font-size: 1.2em;
       }
     </style>
   </head>
@@ -83,98 +98,29 @@
     <h1>馬研究室</h1>
     <h2>長崎大学環境科学部</h2>
 
-    <a href="javascript:void(0);" class="book-button" onclick="toggleEducation()">教育</a>
+    <div class="button-container">
+      <a href="javascript:void(0);" class="book-button" onclick="toggleEducation()">教育</a>
+      <a href="#" class="book-button">研究</a>
+      <a href="#" class="book-button">ゼミ</a>
+    </div>
 
-<div id="education-content" style="display: none; margin-left: 2em; margin-top: 1em; font-family: 'Hiragino Kaku Gothic Pro', 'Hiragino Sans', sans-serif;">
-  <h3 style="margin: 0;">担当授業</h3>
-  <ul>
-    <li>環境経済学II</li>
-    <li>環境経済学特講II</li>
-    <li>環境経済学特論</li>
-  </ul>
-</div>
+    <div id="education-content" class="education-box">
+      <h3>担当授業</h3>
+      <ul>
+        <li>環境経済学II</li>
+        <li>環境経済学特講II</li>
+        <li>環境経済学特論</li>
+      </ul>
+    </div>
 
-<script>
-  function toggleEducation() {
-    const edu = document.getElementById("education-content");
-    edu.style.display = edu.style.display === "none" ? "block" : "none";
-  }
-</script>
-
-<style>
-  .book-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-left: 1.5em;
-    background-color: white;
-    color: #000000;
-    text-decoration: none;
-     /* border-radius: 6px; */
-    font-size: 1.5em;
-    font-weight: bold;
-    font-family: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
-    transition: all 0.3s ease;
-    border-bottom: 2pt solid transparent; /* 默认透明 */
-    line-height: 1.1;
-  }
-  
-    .book-button:hover {
-    border-bottom: 2pt solid black; /* 悬停时显示直角黑色下划线 */
-  }
-  
-</style>
-
-
-       <a href="#" class="book-button">研 究</a>
-
-<style>
-  .book-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-left: 2em;
-    background-color: white;
-    color: #000000;
-    text-decoration: none;
-     /* border-radius: 6px; */
-    font-size: 1.5em;
-    font-weight: bold;
-    font-family: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
-    transition: all 0.3s ease;
-    border-bottom: 2pt solid transparent; /* 默认透明 */
-    line-height: 1.1;
-  }
-  
-    .book-button:hover {
-    border-bottom: 2pt solid black; /* 悬停时显示直角黑色下划线 */
-  }
-  
-</style>
-
-   <a href="#" class="book-button">ゼ ミ</a>
-
-<style>
-  .book-button {
-    display: inline-block;
-    padding: 10px 20px 6px 20px;
-    margin-left: 2em;
-    background-color: white;
-    color: #000000;
-    text-decoration: none;
-    /* border-radius: 6px; */
-    font-size: 1.5em;
-    font-weight: bold;
-    font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
-    transition: all 0.3s ease;
-    border-bottom: 2pt solid transparent; /* 默认透明 */
-    line-height: 2;
-  }
-  
-    .book-button:hover {
-    border-bottom: 2pt solid black; /* 悬停时显示直角黑色下划线 */
-  }
-</style>
-    
+    <script>
+      function toggleEducation() {
+        const edu = document.getElementById("education-content");
+        edu.style.display = edu.style.display === "none" ? "block" : "none";
+      }
+    </script>
 
   </body>
 </html>
+
 
