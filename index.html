@@ -100,7 +100,7 @@
 
     <div class="button-container">
       <a href="javascript:void(0);" class="book-button" onclick="toggleEducation()">教育</a>
-      <a href="javascript:void(0);" class="book-button" onclick="toggleStudy()">研究</a>
+      <a href="#" class="book-button">研究</a>
       <a href="#" class="book-button">ゼミ</a>
     </div>
 
@@ -116,18 +116,6 @@
     <script>
       function toggleEducation() {
         const edu = document.getElementById("education-content");
-        edu.style.display = edu.style.display === "none" ? "block" : "none";
-      }
-    </script>
-
-    <div id="study-content" class="study-box">
-      <h3>研究活動</h3>
-      <p>再生可能エネルギー、電力市場、環境政策、排出権取引<\p>
-    </div>
-
-    <script>
-      function toggleStudy() {
-        const stu = document.getElementById("study-content");
         edu.style.display = edu.style.display === "none" ? "block" : "none";
       }
     </script>
