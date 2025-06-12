@@ -7,31 +7,29 @@
       body {
         margin: 0;
         padding: 0;
-        font-family: Arial, sans-serif; /* 全局字体设为 Arial */
+        font-family: Arial, sans-serif;
       }
-      
-      h1, h2 { 
-        margin: 0;     /* 先清除默认的margin */
-        padding: 0;    /* 清除padding */
+
+      h1, h2 {
+        margin: 0;
+        padding: 0;
       }
-      
+
       h1 {
         font-size: 3em;
-        /*font-weight: bold;*/
         color: #000000;
         text-align: left;
         margin-top: 2em;
-        margin-left: 1em; /* 左边留点空 */
-        font-family: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
-      }
-      
-      h2 {
-        font-size: 1.5em;
-        color: #000000;
-        margin-left: 2em; /* 左边留点空 */
+        margin-left: 1em;
         font-family: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
       }
 
+      h2 {
+        font-size: 1.5em;
+        color: #000000;
+        margin-left: 2em;
+        font-family: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
+      }
 
       .top-right {
         position: fixed;
@@ -45,10 +43,33 @@
         text-decoration: none;
         color: black;
         padding: 6px 10px;
+        background-color: white;
+        border-radius: 6px;
       }
 
       .top-right a:hover {
-        background-color: #f0f0f0;
+        background-color: white; /* 保持白色 */
+      }
+
+      .book-button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-left: 2em;
+        background-color: white;
+        color: #000000;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 1em;
+        font-weight: bold;
+        font-family: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
+        transition: none; /* 取消背景渐变 */
+      }
+
+      .book-button:hover,
+      .book-button:active,
+      .book-button:focus {
+        background-color: white;
+        color: #000000;
       }
     </style>
   </head>
@@ -64,25 +85,31 @@
     <p style="text-align: center;">This is my GitHub Pages site.</p>
 
     <a href="#" class="book-button">教育</a>
-    <style>
-      .book-button {
-        display: inline-block;
-        padding: 10px 20px;
-        margin-left: 2em;
-        background-color: #FFFFFF
-        color: #000000;
-        text-decoration: none;
-        border-radius: 6px;
-        font-size: 1em;
-        font-weight: bold;
-        font-family: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
-        transition: background-color 0.3s ease;
-      }
-      
-      .book-button:hover {
-        background-color: #005fa3;
-      }
-    </style>
-    
+
+<style>
+  .book-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 2em;
+    background-color: white;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
+    transition: all 0.3s ease;
+    border-bottom: 2pt solid transparent; /* 默认透明 */
+  }
+
+  .book-button:hover {
+    background-color: white;
+    color: #000000;
+    border-bottom: 2pt solid black; /* 鼠标悬停时显示黑线 */
+  }
+</style>
+
+
   </body>
 </html>
+
