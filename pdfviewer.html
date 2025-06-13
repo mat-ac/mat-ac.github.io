@@ -7,11 +7,18 @@
     body, html {
       margin: 0; padding: 0; height: 100%;
       overflow: hidden;
+      font-family: Arial, sans-serif;
     }
     iframe {
       width: 100%;
       height: 100vh;
       border: none;
+    }
+    p {
+      padding: 1em;
+      text-align: center;
+      font-size: 1.2em;
+      color: #666;
     }
   </style>
 </head>
@@ -19,17 +26,17 @@
   <iframe id="pdf-frame" src=""></iframe>
 
   <script>
-    // 从 URL 参数获取 pdf 文件名
     const params = new URLSearchParams(window.location.search);
     const file = params.get('file');
 
-    if (file) {
-      // 设定 iframe 的 src
-      document.getElementById('pdf-frame').src = 'pdfs/' + file;
+    if (file && !file.includes('..')) {
+      document.title = 'PDF Viewer - ' + file;
+      document.getElementById('pdf-frame').src = '/pdfs/' + file;
     } else {
-      document.body.innerHTML = '<p>No PDF file specified.</p>';
+      document.body.innerHTML = '<p>No valid PDF file specified.</p>';
     }
   </script>
 </body>
 </html>
+
 
