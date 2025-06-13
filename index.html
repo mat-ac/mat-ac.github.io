@@ -83,7 +83,7 @@
     }
 
     .content-box h3 {
-      margin: 1em 0 0.5em 0;
+      margin: 0 0 0.5em 0;
       font-size: 1.2em;
     }
 
@@ -137,6 +137,17 @@
     #thesis-list ul li a:hover {
       text-decoration: underline;
     }
+
+    #intro-paragraph p {
+      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+      font-size: 1.2em;       /* 字号（相对于父元素，1.1倍） */
+      text-align: justify;    /* 文本对齐（两端对齐） */
+      line-height: 1.5;       /* 行间距 */
+      margin: 10px auto;      /* 上下留白20px，左右居中 */
+      max-width: 800px;       /* 段落最大宽度限制 */
+      padding: 0 10px;        /* 左右内边距 */
+      text-indent: 2em;         /* 首行缩进2个全角字符 */
+    }
   </style>
 </head>
 <body>
@@ -171,7 +182,7 @@
 
   <div id="seminar-content" class="content-box" style="margin-left: 2em; margin-right: 2em; text-indent: 2em; line-height: 1.8;">
     <h3>馬　研究室</h3>
-    <p>
+    <p class="intro-paragraph">
       環境経済学とは、広範囲に及ぶ環境問題について、経済学の手法を使って分析する分野です。本研究室では、環境破壊の影響を評価すること、または環境対策を実現するための政策手段を評価することに着目し、計量経済学の分析手法を用いて論文を作成することを目指しています。
     </p>
     <h3>ゼミ生たちは何をしていますか？</h3>
