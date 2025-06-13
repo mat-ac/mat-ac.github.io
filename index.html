@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>TENG MA</title>
   <style>
     body {
@@ -68,6 +68,7 @@
       border: none;
       border-bottom: 2pt solid transparent;
       line-height: 1.2;
+      cursor: pointer;
     }
 
     .book-button:hover {
@@ -106,11 +107,36 @@
       border: none;
       border-left: 4px solid transparent;
       text-align: left;
+      cursor: pointer;
     }
 
     .vertical-button-container .book-button:hover {
       border-left: 4px solid black;
       background-color: #f5f5f5;
+    }
+
+    /* 新增对 h4 的样式 */
+    #thesis-list h4 {
+      color: #000000;
+      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+      font-weight: bold;
+      font-size: 1em;
+      margin-bottom: 0.5em;
+    }
+
+    #thesis-list ul {
+      padding-left: 1.2em;
+      margin-top: 0;
+    }
+
+    #thesis-list ul li a {
+      color: #000000;
+      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+      text-decoration: none;
+    }
+
+    #thesis-list ul li a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -147,16 +173,12 @@
   <div id="seminar-content" class="content-box" style="margin-left: 2em; margin-right: 2em; text-indent: 2em; line-height: 1.8;">
     <h3>馬　研究室</h3>
     <p>
-      環境経済学とは、広範囲に及ぶ環境問題について、経済学の手法を使って分析する分野です。
-      本研究室では、環境破壊の影響を評価すること、または環境対策を実現するための政策手段を評価することに着目し、
-      計量経済学の分析手法を用いて論文を作成することを目指しています。
+      環境経済学とは、広範囲に及ぶ環境問題について、経済学の手法を使って分析する分野です。本研究室では、環境破壊の影響を評価すること、または環境対策を実現するための政策手段を評価することに着目し、計量経済学の分析手法を用いて論文を作成することを目指しています。
     </p>
-
     <h3>ゼミ生たちは何をしていますか？</h3>
 
     <div class="vertical-button-container">
       <a href="javascript:void(0);" class="book-button" onclick="toggleThesis()">卒業論文</a>
-
       <div id="thesis-list" style="display: none; margin-left: 1em; line-height: 1.6;">
         <h4>2024年度</h4>
         <ul>
@@ -166,7 +188,6 @@
           <li><a href="pdfs/thesis4.html" target="_blank">長崎スタジアムシティにおける経済波及効果と環境負荷の分析～産業連関分析の手法を用いて～</a></li>
         </ul>
       </div>
-
       <a href="#" class="book-button">修士研究</a>
       <a href="#" class="book-button">プロジェクト</a>
     </div>
@@ -186,8 +207,8 @@
     }
 
     function toggleThesis() {
-      const list = document.getElementById("thesis-list");
-      list.style.display = (list.style.display === "none" || list.style.display === "") ? "block" : "none";
+      const thesisList = document.getElementById('thesis-list');
+      thesisList.style.display = (thesisList.style.display === 'none' || thesisList.style.display === '') ? 'block' : 'none';
     }
   </script>
 
