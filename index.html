@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
   <meta charset="utf-8" />
   <title>TENG MA</title>
@@ -8,7 +8,7 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      padding-bottom: 100px; 
+      padding-bottom: 100px;
     }
 
     h1, h2 {
@@ -79,37 +79,28 @@
     .content-box {
       display: none;
       margin-left: 2em;
-      margin-top: 1em;
+      margin-right: 2em;
       font-family: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
+      line-height: 1.8;
     }
 
     .content-box h3 {
-      margin: 0 0 0.5em 0;
       font-size: 1.2em;
-      margin-left: 2em; 
+      margin-left: 2em;
     }
 
     .vertical-button-container {
       display: flex;
       flex-direction: column;
       gap: 1em;
-      margin: 2em;
       margin-left: 2em;
+      margin-top: 1em;
     }
 
     .vertical-button-container .book-button {
-      padding: 10px 20px 6px 20px;
-      background-color: white;
-      color: #000000;
-      text-decoration: none;
       font-size: 1em;
-      font-weight: bold;
-      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
-      transition: all 0.3s ease;
-      border: none;
-      border-left: 4px solid transparent;
       text-align: left;
-      cursor: pointer;
+      border-left: 4px solid transparent;
     }
 
     .vertical-button-container .book-button:hover {
@@ -117,30 +108,30 @@
       background-color: #f5f5f5;
     }
 
-    #thesis-list h4, #seminar-activity h4 {
-      color: #000000;
-      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+    #research-list h4,
+    #thesis-list h4,
+    #seminar-activity h4 {
       font-weight: bold;
       font-size: 1em;
       margin-bottom: 0.5em;
     }
 
-    #thesis-list ul, #seminar-activity ul {
-      padding-left: 0.5em;
-      margin-top: 0;
+    ul {
+      padding-left: 1.5em;
     }
 
-    #thesis-list ul li a, #seminar-activity ul li a {
-      color: #000000;
-      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+    li a {
       text-decoration: none;
+      color: #000;
     }
 
-    #thesis-list ul li a:hover, #seminar-activity ul li a:hover {
+    li a:hover {
       text-decoration: underline;
     }
 
-    p.intro-paragraph {
+    p.intro-paragraph,
+    p.intro-paragraph_2,
+    p.intro-paragraph_3 {
       font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
       font-size: 1em;
       text-align: justify;
@@ -149,30 +140,14 @@
       margin-left: 4em;
       margin-right: 2em;
       padding: 0;
+    }
+
+    p.intro-paragraph {
       text-indent: 1em;
     }
 
-    p.intro-paragraph_2 {
-      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
-      font-size: 1em;
-      text-align: justify;
-      line-height: 1.5;
-      max-width: 1000px;
-      margin-left: 4em;
-      margin-right: 2em;
-      padding: 0;
-      text-indent: 0em;
-    }
-
-     p.intro-paragraph_3 {
-      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
-      font-size: 1em;
-      text-align: justify;
-      line-height: 1.5;
-      max-width: 1000px;
-      margin-left: 4em;
-      margin-right: 2em;
-      padding: 0;
+    p.intro-paragraph_2,
+    p.intro-paragraph_3 {
       text-indent: 0em;
     }
   </style>
@@ -188,87 +163,66 @@
   <h2>長崎大学環境科学部　環境政策コース</h2>
 
   <div class="button-container">
-    <a href="javascript:void(0);" class="book-button" onclick="toggleSection('education')">教育</a>
-    <a href="javascript:void(0);" class="book-button" onclick="toggleSection('study')">研究</a>
-    <a href="javascript:void(0);" class="book-button" onclick="toggleSection('seminar')">ゼミ</a>
+    <button class="book-button" onclick="toggleSection('education')">教育</button>
+    <button class="book-button" onclick="toggleSection('study')">研究</button>
+    <button class="book-button" onclick="toggleSection('seminar')">ゼミ</button>
   </div>
 
-  <div id="education-content" class="content-box" style="margin-right: 2em; text-indent: 2em; line-height: 1.8;">  
-    <p class="intro-paragraph_2">
-      環境経済学について、講義・実習を担当しています（2024年度の担当科目）。
-    </p>
-  
+  <!-- 教育 -->
+  <div id="education-content" class="content-box">
+    <p class="intro-paragraph_2">環境経済学について、講義・実習を担当しています（2024年度の担当科目）。</p>
     <h3>学部</h3>
-    <p class="intro-paragraph_2">
-     <strong>資源管理論（1クオーター）</strong>濱崎宏則先生との共同担当します。私は、エネルギー・鉱物資源、廃棄物とリサイクル政策、エコロジカルフットプリントなどの実例を元に資源経済学についての導入的講義をいたします。
-    </p>
-    <p class="intro-paragraph_2">
-     <strong>環境経済学II（前期）</strong>環境問題の発生原因を経済学的な視点から解説し、その解決手段の経済学含意を考えます。なぜ環境問題が発生するのか、その対応策、または環境の価値を貨幣単位で評価する手法について解説します。
-    </p>
-    <p class="intro-paragraph_2">
-     <strong>Introduction to Environment Science（前期）</strong>環境科学部の先生方と共同で実施しております。私は英語でエッセイの書き方を紹介します。
-    </p>
-    <p class="intro-paragraph_2">
-     <strong>持続可能社会論I（後期）</strong>竹下貴之先生との共同担当します。私は、公害、廃棄物、再生可能エネルギーなど様々な地域環境の現場において発生した問題に対して、環境と経済の繋がりを解説します。
-    </p>
-    <p class="intro-paragraph_2">
-     <strong>大気環境概論（後期）</strong>環境科学部の先生方と共同で実施しております。私は排出権取引の考え方を解説し、世界中の排出権取引市場を紹介します。
-    </p>
-    <p class="intro-paragraph_2">
-     <strong>環境政策基礎演習Ｂ（後期）</strong>政策論文を書く際のデータ分析をわかっており、また政策提言のための実証的な証拠（エビデンス）が必要性であることを理解するように解説する。
-    </p>
-    <p class="intro-paragraph_2">
-     <strong>環境政策演習A・B（通年）</strong>環境問題に関する実証研究の遂行に向けた研究指導を行います。
-    </p>
-    <p class="intro-paragraph_2">
-     <strong>環境科学特別研究（通年）</strong>卒業研究指導を行います。
-    </p>
- 
+    <p class="intro-paragraph_2"><strong>資源管理論（1クオーター）</strong> 濱崎宏則先生との共同担当。エネルギーや資源の経済学を講義。</p>
+    <p class="intro-paragraph_2"><strong>環境経済学II（前期）</strong> 経済学的視点から環境問題の発生要因や解決策を解説。</p>
+    <p class="intro-paragraph_2"><strong>Introduction to Environment Science（前期）</strong> 英語エッセイの書き方を担当。</p>
+    <p class="intro-paragraph_2"><strong>持続可能社会論I（後期）</strong> 地域環境問題を経済と環境の観点から解説。</p>
+    <p class="intro-paragraph_2"><strong>大気環境概論（後期）</strong> 排出権取引の仕組みを紹介。</p>
+    <p class="intro-paragraph_2"><strong>環境政策基礎演習Ｂ（後期）</strong> 政策論文執筆とデータ分析の指導。</p>
+    <p class="intro-paragraph_2"><strong>環境政策演習A・B（通年）</strong> 実証研究の指導。</p>
+    <p class="intro-paragraph_2"><strong>環境科学特別研究（通年）</strong> 卒業研究の指導。</p>
     <h3>大学院</h3>
-    <p class="intro-paragraph_2">
-     <strong>環境経済政策学特講（1クオーター）</strong>昔宣希先生との共同担当します。環境政策の体系や政策統合のあり方について解説し、環境政策手段の経済学的基礎を説明します。
-    </p>
-    <p class="intro-paragraph_2">
-     <strong>環境経済学特講Ⅱ（3クオーター）</strong>電力システムの構造、電力市場で使う経済学、電力市場の基本仕組みについて解説します。
-    </p>
-    <p class="intro-paragraph_2">
-     <strong>環境経済学特論（4クオーター）</strong>環境経済学に関する外国文献の講読します。Journal of Environmental Economics and Managementに掲載された学術論文を輪読します。
-    </p>
+    <p class="intro-paragraph_2"><strong>環境経済政策学特講（1クオーター）</strong> 昔宣希先生と共同で、環境政策の体系や手段を講義。</p>
+    <p class="intro-paragraph_2"><strong>環境経済学特講Ⅱ（3クオーター）</strong> 電力市場の構造や経済理論を解説。</p>
+    <p class="intro-paragraph_2"><strong>環境経済学特論（4クオーター）</strong> 英文文献の輪読。</p>
   </div>
 
-  <div id="study-content" class="content-box" style="margin-right: 2em; text-indent: 2em; line-height: 1.8;">
+  <!-- 研究 -->
+  <div id="study-content" class="content-box">
     <p class="intro-paragraph">
-      再生可能エネルギーの導入政策と電力市場の活性化について研究しています。最近では、日本における再生可能エネルギー電源のメリットオーダー効果を評価するとともに、日本の新電力が地域経済循環に参加する要因の解明に取り組んでいます。
+      再生可能エネルギーの導入政策と電力市場の活性化について研究しています。
     </p>
-  　 <div class="vertical-button-container">
-      <a href="javascript:void(0);" class="book-button" onclick="toggleThesisList()">最近が行っている研究</a>
-      <div id="thesis-list" style="display: none; margin-left: 1em; line-height: 1.6;">
+    <div class="vertical-button-container">
+      <button class="book-button" onclick="toggleList('research-list')">最近の研究</button>
+      <div id="research-list" style="display: none;">
         <ul>
-          <li><a href="pdfviewer.html?file=pps.pdf" target="_blank">［要旨］Can Renewable Energy Boost the Business Outcomes of Power Suppliers? An Empirical Study on Japan's Power Producer and Supplier</a></li>
+          <li><a href="pdfviewer.html?file=pps.pdf" target="_blank">［要旨］Can Renewable Energy Boost the Business Outcomes of Power Suppliers?</a></li>
         </ul>
       </div>
+    </div>
+  </div>
 
-  <div id="seminar-content" class="content-box" style="margin-right: 2em; text-indent: 2em; line-height: 1.8;">
+  <!-- ゼミ -->
+  <div id="seminar-content" class="content-box">
     <p class="intro-paragraph">
-      環境経済学とは、広範囲に及ぶ環境問題について、経済学の手法を使って分析する分野です。本研究室では、環境破壊の影響を評価すること、または環境対策を実現するための政策手段を評価することに着目し、計量経済学の分析手法を用いて論文を作成することを目指しています。
+      環境経済学では環境破壊や環境対策を、経済学的手法で分析します。本ゼミでは計量経済学を活用した実証研究を行います。
     </p>
     <h3>ゼミ生たちは何をしていますか？</h3>
     <div class="vertical-button-container">
-      <a href="javascript:void(0);" class="book-button" onclick="toggleThesisList()">卒業論文</a>
-      <div id="thesis-list" style="display: none; margin-left: 1em; line-height: 1.6;">
+      <button class="book-button" onclick="toggleList('thesis-list')">卒業論文</button>
+      <div id="thesis-list" style="display: none;">
         <h4>2024年度</h4>
         <ul>
-          <li><a href="pdfviewer.html?file=hayashita.pdf" target="_blank">［要旨］大学生のコスメロスの削減意識に関する実証研究：長崎大学を対象として</a></li>
-          <li><a href="pdfviewer.html?file=cai.pdf" target="_blank">［要旨］日本におけるシェアサイクルの普及が交通混雑の改善に与える影響に関する研究――福岡市と長崎市を例にして</a></li>
-          <li><a href="pdfviewer.html?file=odahata.pdf" target="_blank">［要旨］衣料品回収の協力促進に向けた生活者の意識と行動の考察～長崎市における衣料品回収事業をもとに～</a></li>
-          <li><a href="pdfviewer.html?file=kishigawa.pdf" target="_blank">［要旨］長崎スタジアムシティにおける経済波及効果と環境負荷の分析～産業連関分析の手法を用いて～</a></li>
+          <li><a href="pdfviewer.html?file=hayashita.pdf" target="_blank">大学生のコスメロスに関する研究</a></li>
+          <li><a href="pdfviewer.html?file=cai.pdf" target="_blank">シェアサイクルの交通改善効果：福岡・長崎</a></li>
+          <li><a href="pdfviewer.html?file=odahata.pdf" target="_blank">衣料品回収と市民意識：長崎市の事例</a></li>
+          <li><a href="pdfviewer.html?file=kishigawa.pdf" target="_blank">スタジアムシティの経済波及効果と環境負荷</a></li>
         </ul>
       </div>
-      <a href="#" class="book-button">修士研究</a>
-      <a href="javascript:void(0);" class="book-button" onclick="toggleSeminarActivity()">ゼミ活動</a>
-      <div id="seminar-activity" style="display: none; margin-left: 0em; line-height: 1.6;">
+      <button class="book-button">修士研究</button>
+      <button class="book-button" onclick="toggleList('seminar-activity')">ゼミ活動</button>
+      <div id="seminar-activity" style="display: none;">
         <p class="intro-paragraph_3">
-          2025年2月20日 <strong>立命館大学・長崎大学・九州大学 合同研究発表会</strong> を行いました（場所：長崎大学環境科学部棟341教室）。
+          2025年2月20日 <strong>立命館・長崎・九州大学合同研究発表会</strong>（場所：長崎大学環境科学部棟341教室）
         </p>
       </div>
     </div>
@@ -277,25 +231,19 @@
   <script>
     function toggleSection(section) {
       const sections = ['education', 'study', 'seminar'];
-      sections.forEach(s => {
-        const el = document.getElementById(s + '-content');
-        if (el) {
-          el.style.display = (s === section) ? 'block' : 'none';
-        }
+      sections.forEach(id => {
+        const el = document.getElementById(id + '-content');
+        if (el) el.style.display = (id === section) ? 'block' : 'none';
       });
     }
 
-    function toggleThesisList() {
-      const list = document.getElementById('thesis-list');
-      list.style.display = (list.style.display === 'none' || list.style.display === '') ? 'block' : 'none';
-    }
-
-    function toggleSeminarActivity() {
-      const activity = document.getElementById('seminar-activity');
-      activity.style.display = (activity.style.display === 'none' || activity.style.display === '') ? 'block' : 'none';
+    function toggleList(id) {
+      const el = document.getElementById(id);
+      if (el) el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
     }
   </script>
 
 </body>
 </html>
+
 
