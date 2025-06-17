@@ -43,7 +43,7 @@
       font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
     }
 
-        .button-container {
+    .button-container {
       display: flex;
       gap: 1.5em;
       margin-left: 2em;
@@ -69,7 +69,7 @@
       border-bottom: 2pt solid black;
     }
 
-     .vertical-button-container {
+    .vertical-button-container {
       display: flex;
       flex-direction: column;
       gap: 1em;
@@ -97,7 +97,7 @@
       background-color: #f5f5f5;
     }
 
-    p.intro-paragraph_2 {
+    .intro-paragraph {
       font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
       font-size: 1em;
       text-align: justify;
@@ -115,6 +115,11 @@
       margin-left: 2em;
       font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
     }
+
+    .content-box {
+      margin-top: 1em;
+      margin-left: 2em;
+    }
   </style>
 </head>
 <body>
@@ -124,25 +129,34 @@
   </div>
 
   <h2>TENG MA (ASSOCIATE PROFESSOR)</h2>
-  <h2>FACULTY OF ENVIRONMENTAL SCIENCE, NAGASAKI UNIVERSITY</h2>
-  <h2>〒852-8521　1-14, BUKYO-CHO, NAGASAKI</h2>
+  <h3>FACULTY OF ENVIRONMENTAL SCIENCE, NAGASAKI UNIVERSITY</h3>
+  <h4 style="margin-left: 2em;">〒852-8521　1-14, BUKYO-CHO, NAGASAKI</h4>
 
-   <div class="button-container">
+  <div class="button-container">
     <a href="javascript:void(0);" class="book-button" onclick="toggleSection('CV')">CV</a>
   </div>
 
-   <div id="CV-content" class="content-box">
+  <div id="CV-content" class="content-box" style="display: none;">
     <h3>Education</h3>
-    <p class="intro-paragraph left-align">
-      Ph.D. Economics, Kobe University, 2017
-    </p>
-    <p class="intro-paragraph left-align">
-      M.A. Environmental Science, The University of Shiga Prefecture, 2014
-    </p>
-    <p class="intro-paragraph left-align">
-      B.A. Management, Hubei University of Technology, 2010.
-    </p>
+    <p class="intro-paragraph">Ph.D. Economics, Kobe University, 2017</p>
+    <p class="intro-paragraph">M.A. Environmental Science, The University of Shiga Prefecture, 2014</p>
+    <p class="intro-paragraph">B.A. Management, Hubei University of Technology, 2010</p>
   </div>
+
+  <script>
+    function toggleSection(id) {
+      const content = document.getElementById(id + '-content');
+      if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+      } else {
+        content.style.display = 'none';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('CV-content').style.display = 'none';
+    });
+  </script>
 
 </body>
 </html>
