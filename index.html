@@ -1,68 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TENG MA</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: Arial, sans-serif;
-      padding-bottom: 100px; 
-    }
-
-    h1, h2 {
-      margin: 0;
-      padding: 0;
+      padding-bottom: 100px;
     }
 
     h1 {
-      font-size: 3em;
-      color: #000000;
+      font-size: 2.5em;
+      color: #000;
       text-align: left;
-      margin-top: 2em;
-      margin-left: 1em;
+      margin: 1em;
       font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
     }
 
     h2 {
-      font-size: 1.5em;
-      color: #000000;
-      margin-left: 2em;
+      font-size: 1.2em;
+      color: #000;
+      margin: 0 1em 1em 1em;
       font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
     }
 
-    .top-right {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      font-size: 1.2em;
+     .top-right {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1em;
     }
 
+    
     .top-right a {
       text-decoration: none;
       color: black;
-      padding: 6px 10px;
+      padding: 4px 8px;
       background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
-
+    
     .top-right a:hover {
-      background-color: white;
+      background-color: #f0f0f0;
     }
-
+    
     .button-container {
       display: flex;
-      gap: 1.5em;
-      margin-left: 2em;
-      margin-top: 1em;
+      flex-wrap: wrap;
+      gap: 1em;
+      margin: 1em;
     }
 
     .book-button {
-      padding: 10px 20px 6px 20px;
+      padding: 0.6em 1.2em;
       background-color: white;
-      color: #000000;
+      color: #000;
       text-decoration: none;
-      font-size: 1.5em;
+      font-size: 1em;
       font-weight: bold;
       font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
       transition: all 0.3s ease;
@@ -78,38 +75,22 @@
 
     .content-box {
       display: none;
-      margin-left: 2em;
-      margin-top: 1em;
+      margin: 1em;
       font-family: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
-    }
-
-    .content-box h3 {
-      margin: 0 0 0.5em 0;
-      font-size: 1.2em;
-      margin-left: 2em; 
+      line-height: 1.8;
     }
 
     .vertical-button-container {
       display: flex;
       flex-direction: column;
       gap: 1em;
-      margin: 2em;
-      margin-left: 2em;
+      margin: 1em;
     }
 
     .vertical-button-container .book-button {
-      padding: 10px 20px 6px 20px;
-      background-color: white;
-      color: #000000;
-      text-decoration: none;
-      font-size: 1em;
-      font-weight: bold;
-      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
-      transition: all 0.3s ease;
-      border: none;
-      border-left: 4px solid transparent;
       text-align: left;
-      cursor: pointer;
+      border-left: 4px solid transparent;
+      font-size: 1em;
     }
 
     .vertical-button-container .book-button:hover {
@@ -117,89 +98,85 @@
       background-color: #f5f5f5;
     }
 
-    #thesis-list h4, #seminar-activity h4 {
-      color: #000000;
-      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
-      font-weight: bold;
-      font-size: 1em;
-      margin-bottom: 0.5em;
+    ul {
+      padding-left: 1.5em;
     }
 
-    #thesis-list ul, #seminar-activity ul {
-      padding-left: 0.5em;
-      margin-top: 0;
-    }
-
-    #thesis-list ul li a, #seminar-activity ul li a {
-      color: #000000;
-      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+    li a {
       text-decoration: none;
+      color: #000;
     }
 
-    #thesis-list ul li a:hover, #seminar-activity ul li a:hover {
+    li a:hover {
       text-decoration: underline;
     }
 
-    p.intro-paragraph {
+    p.intro-paragraph,
+    p.intro-paragraph_2,
+    p.intro-paragraph_3 {
       font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
       font-size: 1em;
       text-align: justify;
-      line-height: 1.5;
-      max-width: 1000px;
-      margin-left: 4em;
-      margin-right: 2em;
-      padding: 0;
-      text-indent: 1em;
+      line-height: 1.6;
+      margin: 1em;
     }
 
-    p.intro-paragraph_2 {
-      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
-      font-size: 1em;
-      text-align: justify;
-      line-height: 1.5;
-      max-width: 1000px;
-      margin-left: 4em;
-      margin-right: 2em;
-      padding: 0;
-      text-indent: 0em;
+    .left-align {
+      margin-left: 0 !important;
     }
 
-     p.intro-paragraph_3 {
-      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
-      font-size: 1em;
-      text-align: justify;
-      line-height: 1.5;
-      max-width: 1000px;
-      margin-left: 4em;
-      margin-right: 2em;
-      padding: 0;
-      text-indent: 0em;
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+        margin: 1em 1em 0.5em 1em;
+      }
+
+      h2 {
+        font-size: 1em;
+        margin: 0 1em 0.5em 1em;
+      }
+
+      .top-right {
+        font-size: 0.9em;
+        top: 10px;
+        right: 10px;
+      }
+
+      .book-button {
+        font-size: 0.95em;
+        padding: 0.5em 1em;
+      }
+
+      .vertical-button-container {
+        margin: 1em;
+      }
+
+      p {
+        font-size: 0.95em;
+      }
     }
   </style>
 </head>
 <body>
 
   <div class="top-right">
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact Me</a>
+    <a href="about.html">ABOUT</a>
+    <a href="contact.html">CONTACT ME</a>
   </div>
 
   <h1>馬　騰　（TENG MA）</h1>
   <h2>長崎大学環境科学部　環境政策コース</h2>
 
   <div class="button-container">
-    <a href="javascript:void(0);" class="book-button" onclick="toggleSection('education')">教育</a>
-    <a href="javascript:void(0);" class="book-button" onclick="toggleSection('study')">研究</a>
-    <a href="javascript:void(0);" class="book-button" onclick="toggleSection('seminar')">ゼミ</a>
+    <button class="book-button" onclick="toggleSection('education')">教育</button>
+    <button class="book-button" onclick="toggleSection('study')">研究</button>
+    <button class="book-button" onclick="toggleSection('seminar')">ゼミ</button>
   </div>
 
-  <div id="education-content" class="content-box" style="margin-right: 2em; text-indent: 2em; line-height: 1.8;">  
-    <h3>教育活動</h3>
-    <p class="intro-paragraph_2">
-      環境経済学について、講義・実習を担当しています（2024年度の担当科目）。
-    </p>
-  
-    <h3>学部</h3>
+  <!-- 教育 -->
+  <div id="education-content" class="content-box">
+    <p class="intro-paragraph left-align">環境経済学について、講義・実習を担当しています（2024年度の担当科目）。</p>
+       <h3>学部</h3>
     <p class="intro-paragraph_2">
      <strong>資源管理論（1クオーター）</strong>濱崎宏則先生との共同担当します。私は、エネルギー・鉱物資源、廃棄物とリサイクル政策、エコロジカルフットプリントなどの実例を元に資源経済学についての導入的講義をいたします。
     </p>
@@ -237,29 +214,45 @@
     </p>
   </div>
 
-  <div id="study-content" class="content-box" style="margin-right: 2em; text-indent: 2em; line-height: 1.8;">
-    <h3>研究活動</h3>
-    <p class="intro-paragraph">
+
+  <!-- 研究 -->
+  <div id="study-content" class="content-box">
+    <p class="intro-paragraph left-align">
       再生可能エネルギーの導入政策と電力市場の活性化について研究しています。最近では、日本における再生可能エネルギー電源のメリットオーダー効果を評価するとともに、日本の新電力が地域経済循環に参加する要因の解明に取り組んでいます。
     </p>
-  　 <div class="vertical-button-container">
-      <a href="javascript:void(0);" class="book-button" onclick="toggleThesisList()">最近が行っている研究</a>
-      <div id="thesis-list" style="display: none; margin-left: 1em; line-height: 1.6;">
+    <div class="vertical-button-container">
+      <button class="book-button" onclick="toggleList('research-list')">最近の研究</button>
+      <div id="research-list" style="display: none;">
         <ul>
-          <li><a href="pdfviewer.html?file=pps.pdf" target="_blank">［要旨］Can Renewable Energy Boost the Business Outcomes of Power Suppliers? An Empirical Study on Japan's Power Producer and Supplier</a></li>
+          <li><a href="pdfviewer.html?file=pps.pdf" target="_blank">［要旨］Can Renewable Energy Boost the Business Outcomes of Power Suppliers? An Empirical Study on Japan’s Power Producer and Supplier</a></li>
         </ul>
       </div>
+    </div>
+  </div>
 
-  <div id="seminar-content" class="content-box" style="margin-right: 2em; text-indent: 2em; line-height: 1.8;">
-    <h3>馬　研究室</h3>
-    <p class="intro-paragraph">
+  <!-- ゼミ -->
+  <div id="seminar-content" class="content-box">
+    <p class="intro-paragraph left-align">
       環境経済学とは、広範囲に及ぶ環境問題について、経済学の手法を使って分析する分野です。本研究室では、環境破壊の影響を評価すること、または環境対策を実現するための政策手段を評価することに着目し、計量経済学の分析手法を用いて論文を作成することを目指しています。
     </p>
-    <div style="margin-top: 10px;">
     <h3>ゼミ生たちは何をしていますか？</h3>
-    <div class="vertical-button-container">
-      <a href="javascript:void(0);" class="book-button" onclick="toggleThesisList()">卒業論文</a>
-      <div id="thesis-list" style="display: none; margin-left: 1em; line-height: 1.6;">
+      <div class="vertical-button-container">
+      <button class="book-button" onclick="toggleList('notices')">連絡事項</button>
+      <div id="notices" style="display: none;">
+        <p class="intro-paragraph left-align">
+          2024年6月24日 休講
+        </p>
+        </div>
+      <button class="book-button" onclick="toggleList('thesis-list')">卒業論文</button>
+      <div id="thesis-list" style="display: none;">
+        <h4>2025年度</h4>
+        <ul>
+          <li>新電力普及促進に向けた消費者の電力プラン選好要因に関する実証研究：長崎市を対象として</li>
+          <li>森林分野におけるJ-クレジット制度導入の阻害要因に関する実証研究：九州地方を対象として</li>
+          <li>エシカル商品の認知度が若年層の購買意欲に及ぼす影響に関する実証研究：大学生を対象として</li>
+          <li>ファストフード店におけるプラスチック製買物袋のWTPに関する研究：マクドナルドを対象として</li>
+          <li>洋上風力発電の合意形成における漁業者受容に関する実証研究：五島市沖洋上風力発電事業を対象として</li>
+        </ul>
         <h4>2024年度</h4>
         <ul>
           <li><a href="pdfviewer.html?file=hayashita.pdf" target="_blank">［要旨］大学生のコスメロスの削減意識に関する実証研究：長崎大学を対象として</a></li>
@@ -268,11 +261,25 @@
           <li><a href="pdfviewer.html?file=kishigawa.pdf" target="_blank">［要旨］長崎スタジアムシティにおける経済波及効果と環境負荷の分析～産業連関分析の手法を用いて～</a></li>
         </ul>
       </div>
-      <a href="#" class="book-button">修士研究</a>
-      <a href="javascript:void(0);" class="book-button" onclick="toggleSeminarActivity()">ゼミ活動</a>
-      <div id="seminar-activity" style="display: none; margin-left: 0em; line-height: 1.6;">
-        <p class="intro-paragraph_3">
-          2025年2月20日 <strong>立命館大学・長崎大学・九州大学 合同研究発表会</strong> を行いました（場所：長崎大学環境科学部棟341教室）。
+      <button class="book-button" onclick="toggleList('master-list')">修士研究</button> 
+      <div id="master-list" style="display: none;">
+        </div>
+      <button class="book-button" onclick="toggleList('seminar-activity')">ゼミ活動</button>
+      <div id="seminar-activity" style="display: none;">
+        <p class="intro-paragraph left-align">
+          2025年6月17日 <strong>ゼミ歓迎会</strong>（場所：居酒屋いちのヒヨコ）
+        </p>
+        <p class="intro-paragraph left-align">
+          2025年3月13日 <strong>卒業生送別会</strong>（場所：酒場Robeco）
+        </p>
+        <p class="intro-paragraph left-align">
+          2025年2月20日 <strong>立命館・長崎・九州大学合同研究発表会</strong>（場所：長崎大学環境科学部棟341教室）
+        </p>
+        <p class="intro-paragraph left-align">
+          2025年1月7日 <strong>卒業研究輪読会</strong>（場所：長崎大学環境科学部棟環-443教室）
+        </p>
+        <p class="intro-paragraph left-align">
+          2024年6月25日 <strong>ゼミ歓迎会</strong>（場所：居酒屋よろずや住吉店）
         </p>
       </div>
     </div>
@@ -281,25 +288,18 @@
   <script>
     function toggleSection(section) {
       const sections = ['education', 'study', 'seminar'];
-      sections.forEach(s => {
-        const el = document.getElementById(s + '-content');
-        if (el) {
-          el.style.display = (s === section) ? 'block' : 'none';
-        }
+      sections.forEach(id => {
+        const el = document.getElementById(id + '-content');
+        if (el) el.style.display = (id === section) ? 'block' : 'none';
       });
     }
 
-    function toggleThesisList() {
-      const list = document.getElementById('thesis-list');
-      list.style.display = (list.style.display === 'none' || list.style.display === '') ? 'block' : 'none';
-    }
-
-    function toggleSeminarActivity() {
-      const activity = document.getElementById('seminar-activity');
-      activity.style.display = (activity.style.display === 'none' || activity.style.display === '') ? 'block' : 'none';
+    function toggleList(id) {
+      const el = document.getElementById(id);
+      if (el) el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
     }
   </script>
-
 </body>
 </html>
+
 

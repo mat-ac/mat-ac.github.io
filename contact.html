@@ -7,70 +7,80 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 2em;
+      padding: 1em;
       background-color: #FFFFFF;
+      margin: 0;
     }
 
     .top-right {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      font-size: 1.2em;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1em;
     }
 
     .top-right a {
       text-decoration: none;
       color: black;
-      padding: 6px 10px;
+      padding: 4px 8px;
       background-color: white;
-    }
-
-    .top-right a:hover {
-      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
 
     h2 {
-      font-size: 1.5em;
+      font-size: 1.2em;
       color: #000000;
-      margin-left: 1em;
+      margin-left: 0.5em;
+      margin-right: 0.5em;
       font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
     }
 
     h3 {
       font-size: 1em;
       color: #000000;
-      margin-left: 2em;
+      margin-left: 1em;
       font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
     }
 
-    p.intro-paragraph_2 {
+    .intro-paragraph_2 {
       font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
       font-size: 1em;
       text-align: justify;
       line-height: 1.5;
-      max-width: 1000px;
-      margin-left: 2em;
-      margin-right: 2em;
-      padding: 0;
+      margin: 0.5em 1em;
       text-indent: 0em;
     }
 
     p {
       font-size: 1em;
       line-height: 1.6;
-      margin-left: 2em;
+      margin-left: 1em;
       font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+    }
+
+    @media (max-width: 600px) {
+      .top-right {
+        position: static;
+        text-align: right;
+        margin-bottom: 1em;
+      }
+
+      h2, h3, .intro-paragraph_2 {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+      }
     }
   </style>
 </head>
 <body>
 
   <div class="top-right">
-    <a href="index.html">Back to Home</a>
+    <a href="index.html">BACk TO HOME</a>
   </div>
 
-  <h2>連絡先</h2>
-  <h2>長崎大学　環境科学部　馬　騰</h2>
+  <h2>連絡先：</h2>
+  <h3>長崎大学　環境科学部　馬　騰</h3>
   <h3>〒852-8521　長崎市文教町1-14</h3>
   <p class="intro-paragraph_2">
     e-mail：<a href="mailto:mateng@nagasaki-u.ac.jp" target="_blank">mateng(アト)nagasaki-u.ac.jp</a></p>
