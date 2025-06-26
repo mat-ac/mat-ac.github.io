@@ -7,146 +7,114 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 2em;
+      padding: 1em;
       background-color: #FFFFFF;
+      margin: 0;
     }
 
     .top-right {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      font-size: 1.2em;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1em;
     }
 
     .top-right a {
       text-decoration: none;
       color: black;
-      padding: 6px 10px;
+      padding: 4px 8px;
       background-color: white;
-    }
-
-    .top-right a:hover {
-      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
 
     h2 {
-      font-size: 1.5em;
+      font-size: 1.2em;
       color: #000000;
-      margin-left: 1em;
+      margin-left: 0.5em;
+      margin-right: 0.5em;
       font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
     }
 
     h3 {
       font-size: 1em;
       color: #000000;
-      margin-left: 2em;
+      margin-left: 1em;
       font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
     }
 
     .button-container {
       display: flex;
-      gap: 1.5em;
-      margin-left: 2em;
-      margin-top: 1em;
+      flex-wrap: wrap;
+      gap: 1em;
+      margin: 1em;
     }
 
     .book-button {
-      padding: 10px 20px 6px 20px;
+      padding: 8px 16px;
       background-color: white;
       color: #000000;
       text-decoration: none;
-      font-size: 1.5em;
+      font-size: 1em;
       font-weight: bold;
       font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
       transition: all 0.3s ease;
       border: none;
-      border-bottom: 2pt solid transparent;
+      border-bottom: 2px solid transparent;
       line-height: 1.2;
       cursor: pointer;
     }
 
     .book-button:hover {
-      border-bottom: 2pt solid black;
+      border-bottom: 2px solid black;
     }
 
-    .vertical-button-container {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      margin: 2em;
-      margin-left: 4em;
+    .content-box {
+      margin: 1em;
     }
 
-    .vertical-button-container .book-button {
-      padding: 10px 20px 6px 20px;
-      background-color: white;
-      color: #000000;
-      text-decoration: none;
-      font-size: 1.5em;
-      font-weight: bold;
-      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
-      transition: all 0.3s ease;
-      border: none;
-      border-left: 4px solid transparent;
-      text-align: left;
-      cursor: pointer;
-    }
-
-    .vertical-button-container .book-button:hover {
-      border-left: 4px solid black;
-      background-color: #f5f5f5;
-    }
-
-    .intro-paragraph {
-      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
-      font-size: 1em;
-      text-align: justify;
-      line-height: 1.5;
-      max-width: 1000px;
-      margin-left: 2em;
-      margin-right: 2em;
-      padding: 0;
-      text-indent: 1em;
-    }
-    
     .intro-paragraph_2 {
       font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
       font-size: 1em;
       text-align: justify;
       line-height: 1.5;
-      max-width: 1000px;
-      margin-left: 3em;
-      margin-right: 2em;
-      padding: 0;
-      text-indent: 0em;
+      margin: 0.5em 1em;
     }
 
-    p {
-      font-size: 1em;
-      line-height: 1.6;
-      margin-left: 2em;
-      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
-    }
+    @media (max-width: 600px) {
+      .top-right {
+        position: static;
+        text-align: right;
+        margin-bottom: 1em;
+      }
 
-    .content-box {
-      margin-top: 1em;
-      margin-left: 2em;
+      h2, h3, .intro-paragraph_2 {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+      }
+
+      .button-container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="top-right">
+<div class="top-right">
     <a href="index.html">Back to Home</a>
   </div>
   
   <h2>TENG MA (ASSOCIATE PROFESSOR)</h2>
   <h2>FACULTY OF ENVIRONMENTAL SCIENCE, NAGASAKI UNIVERSITY</h2>
-  <h2>〒852-8521　1-14, BUKYO-CHO, NAGASAKI</h2>
+  <h2>〜 1-14, BUKYO-CHO, NAGASAKI 852-8521 〜</h2>
 
   <div class="button-container">
-    <a href="javascript:void(0);" class="book-button" onclick="toggleSection('CV')">CV</a>
-    <a href="javascript:void(0);" class="book-button" onclick="toggleSection('IDEAS')">IDEAS</a>
+    <button class="book-button" onclick="toggleSection('CV')">CV</button>
+    <button class="book-button" onclick="toggleSection('IDEAS')">IDEAS</button>
   </div>
 
   <div id="CV-content" class="content-box" style="display: none;">
@@ -158,7 +126,7 @@
     <p class="intro-paragraph_2">Researcher, Asia Pacific Institute of Research, 2017-2019</p>
     <p class="intro-paragraph_2">Senior Lecturer, Graduate School of Economics, Kyoto University, 2019-2023</p>
     <h3>Research</h3>
-    <h3><em>Filed of Interest</em></h3>
+    <h3><em>Field of Interest</em></h3>
     <p class="intro-paragraph_2">Environmental Economics</p>
     <p class="intro-paragraph_2">Energy Economics</p>
     <p class="intro-paragraph_2">Electricity Market Incentive Design</p>
@@ -188,16 +156,8 @@
   <script>
     function toggleSection(id) {
       const content = document.getElementById(id + '-content');
-      if (content.style.display === 'none' || content.style.display === '') {
-        content.style.display = 'block';
-      } else {
-        content.style.display = 'none';
-      }
+      content.style.display = (content.style.display === 'block') ? 'none' : 'block';
     }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      document.getElementById('CV-content').style.display = 'none';
-    });
   </script>
 
 </body>
