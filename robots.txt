@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
 
-# GitHub Pages 
-Disallow: /.git/
-Disallow: /.github/
 Sitemap: https://mat-ac.github.io/sitemap.xml
