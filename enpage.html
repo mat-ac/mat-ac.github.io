@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="iOhqWwSjF7qLarVY4MLyUyKJdGbBqq4E_SErjYayvE4" />
+  <meta name="msvalidate.01" content="B061CFF33E3F68F566602DD8FACC8D7E" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TENG MA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+      padding-bottom: 100px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #000;
+      text-align: left;
+      margin: 0 1em 1em 1em;
+      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+    }
+
+    h5 {
+      font-size: 2em;
+      color: #000;
+      margin: 0 1em 1em 1em;
+      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      color: #000;
+      margin: 0 1em 1em 1em;
+      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+    }
+
+    h3 {
+      font-size: 1.2em;
+      color: #000;
+      margin: 1em 1em 0.5em 1em;
+      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+     }
+
+   h4 {
+      font-size: 1.1em;
+      color: #000;
+      margin: 1em 1em 0.5em 1.5em;
+      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+     }
+
+     .top-right {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1em;
+    }
+
+    
+    .top-right a {
+      text-decoration: none;
+      color: black;
+      padding: 4px 8px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .top-right a:hover {
+      background-color: #f0f0f0;
+    }
+    
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      margin: 1em;
+    }
+
+    .book-button {
+      padding: 0.6em 1.2em;
+      background-color: white;
+      color: #000;
+      text-decoration: none;
+      font-size: 1.5em;
+      font-weight: bold;
+      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+      transition: all 0.3s ease;
+      border: none;
+      border-bottom: 2pt solid transparent;
+      line-height: 1.2;
+      cursor: pointer;
+    }
+
+    .book-button:hover {
+      border-bottom: 2pt solid black;
+    }
+
+    .content-box {
+      display: none;
+      margin: 1em;
+      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+      line-height: 1.8;
+    }
+
+    .vertical-button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin: 1em;
+    }
+
+    .vertical-button-container .book-button {
+      text-align: left;
+      border-left: 4px solid transparent;
+      font-size: 1em;
+    }
+
+    .vertical-button-container .book-button:hover {
+      border-left: 4px solid black;
+      background-color: #f5f5f5;
+    }
+
+    ul {
+      padding-left: 1.5em;
+    }
+
+    li a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    li a:hover {
+      text-decoration: underline;
+    }
+
+    p.intro-paragraph,
+    p.intro-paragraph_2,
+    p.intro-paragraph_3 {
+      font-family: "Hiragino Maru Gothic Pro", "Hiragino Sans", sans-serif;
+      font-size: 1em;
+      text-align: justify;
+      line-height: 1.6;
+      margin: 1em;
+    }
+
+    .left-align {
+      margin-left: 0 !important;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+        margin: 1em 1em 0.5em 1em;
+      }
+
+      h5 {
+        font-size: 1.5em;
+        margin: 1em 1em 0.5em 1em;
+      }
+
+      h2 {
+        font-size: 1em;
+        margin: 0 1em 0.5em 1em;
+      }
+
+      h3 {
+       font-size: 1em;
+       margin: 1em;
+      }
+
+      h4 {
+       font-size: 0.95em;
+       margin: 1em 1em 0.5em 1.5em;
+      }
+
+      .top-right {
+        font-size: 0.9em;
+        top: 10px;
+        right: 10px;
+      }
+
+      .book-button {
+        font-size: 0.95em;
+        padding: 0.5em 1em;
+      }
+
+      .vertical-button-container {
+        margin: 1em;
+      }
+
+      p {
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-right">
+    <a href="about.html">ABOUT</a>
+    <a href="contact.html">CONTACT ME</a>
+  </div>
+  
+  <div style="margin-top: 7em;">
+  <h5>MA TENG</h5>
+  <h5>Nagasaki University, Faculty of Environmental Science, Environmental Policy Course</h5>
+  <div class="button-container">
+    <button class="book-button" onclick="toggleSection('education')">Education</button>
+    <button class="book-button" onclick="toggleSection('study')">Research</button>
+    <button class="book-button" onclick="toggleSection('seminar')">Seminar</button>
+  </div>
+
+  <!-- Education -->
+  <div id="education-content" class="content-box">
+    <p class="intro-paragraph left-align">I teach lectures and practical sessions in environmental economics (courses for the 2025 academic year).</p>
+       <h3>Undergraduate</h3>
+    <p class="intro-paragraph_2">
+     <strong>Resource Management (1st quarter)</strong> Co-taught with Prof. Hironori Hamasaki. I provide an introductory lecture on resource economics using examples such as energy and mineral resources, waste and recycling policies, and ecological footprints.
+    </p>
+    <p class="intro-paragraph_2">
+     <strong>Environmental Economics II (first semester)</strong> Explains the causes of environmental problems from an economic perspective and considers the economic implications of policy solutions. Topics include why environmental problems occur, policy responses, and methods for monetarily valuing the environment.
+    </p>
+    <p class="intro-paragraph_2">
+     <strong>Introduction to Environment Science (first semester)</strong> Jointly taught with faculty members of the Faculty of Environmental Science. I introduce how to write essays in English.
+    </p>
+    <p class="intro-paragraph_2">
+     <strong>First-Year Seminar (first semester)</strong> Discusses motivation for intellectual activities, logical thinking, and methods of expression.
+    </p>
+    <p class="intro-paragraph_2">
+     <strong>Sustainable Society I (second semester)</strong> Co-taught with Prof. Takayuki Takeshita. I explain the connections between environment and economy through case studies of pollution, waste, renewable energy, and other regional environmental issues.
+    </p>
+    <p class="intro-paragraph_2">
+     <strong>Introduction to Atmospheric Environment (second semester)</strong> Jointly taught with faculty members. I explain the concept of emissions trading and introduce emissions trading markets around the world.
+    </p>
+    <p class="intro-paragraph_2">
+     <strong>Basic Environmental Policy Exercise B (second semester)</strong> Teaches data analysis for policy papers and the importance of empirical evidence for policy recommendations.
+    </p>
+    <p class="intro-paragraph_2">
+     <strong>Environmental Policy Exercise A・B (full year)</strong> Provides research guidance for conducting empirical studies on environmental issues.
+    </p>
+    <p class="intro-paragraph_2">
+     <strong>Special Research in Environmental Science (full year)</strong> Supervises graduation theses.
+    </p>
+ 
+    <h3>Graduate</h3>
+    <p class="intro-paragraph_2">
+     <strong>Special Lecture on Environmental Economics and Policy (1st quarter)</strong> Co-taught with Prof. Nobuki Moto. Explains the framework of environmental policy and policy integration, and the economic foundations of policy instruments.
+    </p>
+    <p class="intro-paragraph_2">
+     <strong>Advanced Environmental Economics II (3rd quarter)</strong> Covers the structure of power systems, economics used in electricity markets, and the basic mechanisms of electricity markets.
+    </p>
+    <p class="intro-paragraph_2">
+     <strong>Advanced Environmental Economics (4th quarter)</strong> Reading of foreign literature on environmental economics.
+    </p>
+    <p class="intro-paragraph_2">
+     <strong>Special Research I (full year)</strong> Supervises master's theses.
+    </p>
+    <p class="intro-paragraph_2">
+     <strong>Integrated Production Science Special Seminar (full year)</strong> Supervises master's theses.
+    </p>
+  </div>
+
+
+  <!-- Research -->
+  <div id="study-content" class="content-box">
+    <p class="intro-paragraph left-align">
+      I research the promotion of renewable energy and the revitalization of electricity markets. Recently, I have been evaluating the merit‑order effect of renewable energy sources in Japan, and investigating the factors that enable new electricity retailers to participate in regional economic circulation.
+    </p>
+      <div class="vertical-button-container">
+      <button class="book-button" onclick="toggleList('research-list')">Past Research</button>
+      <div id="research-list" style="display: none;">
+        <h4>Renewable Energy Penetration in Electricity Markets</h4>
+    <p class="intro-paragraph left-align">&nbsp;&nbsp;&nbsp;Focusing on electricity markets, I analyse the performance of Japan’s electricity market, identify its challenges, and propose desirable institutional designs. Specifically, I examine Japan’s electricity spot market – which has not been sufficiently discussed – and quantitatively verify the price‑reducing effect of renewables on market prices.
+    </p>
+       <p class="intro-paragraph left-align">Ma,T., Du, Y., 2026. Effects of Released Solar Curtailment in Intraday Electricity Market: An Empirical Study in Japan. Applied Economics, forthcoming.</p>   
+       <p class="intro-paragraph left-align">Ma, T., Du, Y., Xu, T., Chen, W., 2022. Cross-regional effects of renewable power generation on the electricity market: an empirical study on Japan's electricity spot market, Applied Economics, Volume 55, 18.</p>
+       <p class="intro-paragraph left-align">Du, Y., Ma, T., 2022. From FIT to FIP: assessing the impact of feed-in policies on renewable development in Germany, Applied Economics Letters, 30, 18.</p>
+       <p class="intro-paragraph left-align">Du, Y., Ma, T., 2021. Impact of electricity pricing strategy on residential energy consumption decisions in China: empirical evidence from a household survey, Journal of Environmental Economics and Policy, 1-18.</p>
+        <h4>Air Pollution Policy in China</h4>
+    <p class="intro-paragraph left-align">&nbsp;&nbsp;&nbsp;I conduct economic analyses of China’s air pollution policies from perspectives such as market mechanisms, policy evaluation, technology choice, and energy efficiency.
+    </p>
+       <p class="intro-paragraph left-align">Yang, J., Du, Y., MA, T., 2025. Assessing the carbon mitigation impact of energy choices in China: a focus on renewable energy and thermal efficiency improvement, Applied Economics, Volume 57, 17.</p>   
+       <p class="intro-paragraph left-align">Ma, T., Du, Y., Xu, T., Pang, J., 2023. How the Thermal Power Sector Affects Carbon Trading: An Empirical Study on China’s Carbon Markets, Applied Economics, 55, 57.</p>
+       <p class="intro-paragraph left-align">Ma, T., and Takeuchi, K., 2020. Cleaning up the Air for the 2008 Beijing Olympic Games: Empirical Study on China ’s Thermal Power Sector, Resource and Energy Economics, 60, 101151.</p>
+       <p class="intro-paragraph left-align">Ma, T., and Takeuchi, K., 2017. Technology Choice for Reducing NOx Emissions: An Empirical Study of Chinese Power Plants, Energy Policy, 102, 362-376.</p>
+      </div>
+      </div> 
+    <div class="vertical-button-container">
+      <button class="book-button" onclick="toggleList('new-study')">Recent Research</button>
+      <div id="new-study" style="display: none;">
+        <h4>New Electricity Retailers and Renewables</h4>
+    <p class="intro-paragraph left-align">
+      &nbsp;&nbsp;&nbsp;Focusing on two key performance indicators – annual revenue and after‑tax net profit – we used a double‑machine learning approach to examine the impact of renewable power generation on the corporate performance of new electricity retailers (PPS) in Japan. The results show that: (1) renewable generation significantly improves after‑tax profits and promotes more active participation in the electricity market; (2) the gradual reduction of the feed‑in tariff (FIT) purchase price undermines the financial stability of small solar operators, while the feed‑in premium (FIP) system enhances the profitability of large wind operators by offering more favourable opportunities in the energy market; and (3) solar curtailment in Kyushu, due to grid and demand constraints, depresses PPS profits.
+    </p>
+        <h4>PJM Capacity Market</h4>
+    <p class="intro-paragraph left-align">
+      &nbsp;&nbsp;&nbsp;Japan’s capacity market – designed to ensure future supply reliability through market mechanisms, explicitly modelled on the U.S. PJM market – aims to complement investment shortfalls. For improving Japan’s capacity market design, it is essential to clarify in detail the mechanisms of PJM as a precedent. However, in Japan, there has been no sufficient systematic introduction or review of PJM’s VRR (Variable Resource Requirement) pricing model. This study aims to organise and review the VRR model in PJM’s capacity market, and by summarising the advantages and potential issues of PJM’s design, we hope to provide a starting point for theoretical and empirical discussions for future institutional improvements and design revisions in Japan’s capacity market.
+    </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Seminar -->
+  <div id="seminar-content" class="content-box">
+    <p class="intro-paragraph left-align">
+      Environmental economics is a field that uses economic methods to analyse a wide range of environmental problems. In our laboratory, we focus on evaluating the impacts of environmental degradation and assessing policy instruments for environmental measures, aiming to write papers using econometric analysis.
+    </p>
+    <h3>What are seminar students doing?</h3>
+      <div class="vertical-button-container">
+      <button class="book-button" onclick="toggleList('notices')">Notices</button>
+      <div id="notices" style="display: none;">
+        <p class="intro-paragraph left-align">
+          None
+        </p>
+        </div>
+      <button class="book-button" onclick="toggleList('thesis-list')">Graduation Theses</button>
+      <div id="thesis-list" style="display: none;">
+        <h4>Academic Year 2026</h4>
+        <ul>
+          <li>Study on beverage container preferences in hot spring facilities: a case study of Nagasaki Prefecture</li>
+          <li>Effect of away‑supporter repeat visits on regional economy in sports spectating: a case study of football matches in Nagasaki</li>
+          <li>Impact of night‑view added value on rental prices: focusing on sloped areas in Nagasaki City</li>
+          <li>Reducing food loss in izakaya pubs: an approach using nudging</li>
+        </ul>
+        <h4>Academic Year 2025</h4>
+        <ul>
+          <li><a href="pdfviewer.html?file=machida.pdf" target="_blank">[Abstract] Empirical study on factors influencing consumers’ electricity plan choice for promoting new power retailers: a case study of Nagasaki City</a></li>
+          <li><a href="pdfviewer.html?file=takahira.pdf" target="_blank">[Abstract] Effect of certification label awareness on purchase intention in ethical consumption: empirical analysis of university students in Nagasaki Prefecture (Excellence Award)</a></li>
+          <li><a href="pdfviewer.html?file=hamada.pdf" target="_blank">[Abstract] Empirical study on acceptance of offshore wind power by fishers: a case study of fishery cooperatives in Nagasaki Prefecture</a></li>
+          <li><a href="pdfviewer.html?file=horihata.pdf" target="_blank">[Abstract] Willingness to pay for plastic shopping bags in fast‑food restaurants: a case study of McDonald’s</a></li>
+          <li><a href="pdfviewer.html?file=kiyohara.pdf" target="_blank">[Abstract] Empirical study on barriers to introducing the J‑Credit scheme in the forestry sector: a case study of forestry organisations in Kyushu</a></li>
+        </ul>
+        <h4>Academic Year 2024</h4>
+        <ul>
+          <li><a href="pdfviewer.html?file=hayashita.pdf" target="_blank">[Abstract] Empirical study on university students’ awareness of reducing cosmetic loss: a case study of Nagasaki University</a></li>
+          <li><a href="pdfviewer.html?file=cai.pdf" target="_blank">[Abstract] Impact of bike‑sharing diffusion on traffic congestion improvement in Japan: a case study of Fukuoka City and Nagasaki City</a></li>
+          <li><a href="pdfviewer.html?file=odahata.pdf" target="_blank">[Abstract] Consumer awareness and behaviour toward cooperation in clothing collection: based on clothing collection projects in Nagasaki City</a></li>
+          <li><a href="pdfviewer.html?file=kishigawa.pdf" target="_blank">[Abstract] Economic ripple effects and environmental load of Nagasaki Stadium City: an input‑output analysis</a></li>
+        </ul>
+      </div>
+      <button class="book-button" onclick="toggleList('master-list')">Master's Research</button> 
+      <div id="master-list" style="display: none;">
+        <h4>Academic Year 2026</h4>
+        <ul>
+          <li>Analysis of resource‑recovery and collection policies by municipalities for textile product circularity</li>
+        </ul>
+        </div>
+      <button class="book-button" onclick="toggleList('seminar-destination')">Career Destinations</button>
+      <div id="seminar-destination" style="display: none;">
+        <p class="intro-paragraph left-align">
+          <strong>Private companies</strong>: Ibisoku Co., Ltd., Sekisui Heim Kyushu, Espool Blue Dot Green Co., Ltd., Chugoku Electric Power, Matsuya Foods Co., Ltd.
+        </p>
+        <p class="intro-paragraph left-align">
+          <strong>Public sector</strong>: Nagasaki Prefectural Government, Isahaya City Office, Nagasaki Labour Bureau
+        </p>
+        <p class="intro-paragraph left-align">
+         <strong>Graduate school</strong>: Graduate School of Integrated Science and Technology, Nagasaki University; Graduate School of Global Environmental Studies, Kyoto University
+        </p>
+      </div>
+      <button class="book-button" onclick="toggleList('seminar-activity')">Seminar Activities</button>
+      <div id="seminar-activity" style="display: none;">
+        <p class="intro-paragraph left-align">
+          2 June 2026 – Welcome party for new seminar members
+        </p>
+        <p class="intro-paragraph left-align">
+          23 December 2025 – Graduation thesis reading session
+        </p>
+        <p class="intro-paragraph left-align">
+          29 November 2025 – Seminar trip
+        </p>
+        <p class="intro-paragraph left-align">
+          17 June 2025 – Welcome party
+        </p>
+        <p class="intro-paragraph left-align">
+          13 March 2025 – Farewell party for graduates
+        </p>
+        <p class="intro-paragraph left-align">
+          20 February 2025 – Joint research presentation meeting (Ritsumeikan, Nagasaki, Kyushu Universities)
+        </p>
+        <p class="intro-paragraph left-align">
+          7 January 2025 – Graduation thesis reading session
+        </p>
+        <p class="intro-paragraph left-align">
+          25 June 2024 – Welcome party
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script>
+    function toggleSection(section) {
+      const sections = ['education', 'study', 'seminar'];
+      sections.forEach(id => {
+        const el = document.getElementById(id + '-content');
+        if (el) el.style.display = (id === section) ? 'block' : 'none';
+      });
+    }
+
+    function toggleList(id) {
+      const el = document.getElementById(id);
+      if (el) el.style.display = (el.style.display === 'none' || el.style.display === '') ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
