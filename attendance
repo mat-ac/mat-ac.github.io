@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>欠席回数照会</title>
+<style>
+  body {
+    font-family: -apple-system, "Hiragino Sans", "Yu Gothic", sans-serif;
+    max-width: 420px;
+    margin: 80px auto;
+    padding: 0 20px;
+    color: #333;
+  }
+  h1 { font-size: 20px; font-weight: 600; }
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background: #24292f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  button:disabled { opacity: 0.6; cursor: default; }
+  #result {
+    margin-top: 24px;
+    padding: 16px;
+    border-radius: 6px;
+    background: #f6f8fa;
+    min-height: 24px;
+    white-space: pre-line;
+  }
+  .error { color: #b42318; }
+</style>
+</head>
+<body>
+  <h1>欠席回数照会</h1>
+  <input id="studentId" type="text" inputmode="numeric" placeholder="学番を入力してください" autocomplete="off">
+  <button id="searchBtn">照会</button>
+  <div id="result"></div>
+
+<script>
+  // ↓↓↓ ここに GAS の Web App URL を貼り付けてください
+  const API_URL = "https://script.google.com/macros/s/AKfycbw1M2HFTIjcS0n0pz_hjb4Shovu4c6ZDvi0hhRldvYoMmEufNdv1m-mPXv_E_TeLztT/exec";
+
+  const input = document.getElementById("studentId");
+  const btn = document.getElementById("searchBtn");
+  const result = document.getElementById("result");
+
+  async function search() {
+    const id = input.value.trim();
+    if (!id) {
+      result.textContent = "学番を入力してください。";
+      result.className = "error";
+      return;
+    }
+
+    btn.disabled = true;
+    result.textContent = "照会中…";
+    result.className = "";
+
+    try {
+      const res = await fetch(API_URL + "?id=" + encodeURIComponent(id));
+      const data = await res.json();
+
+      if (data.error === "not found") {
+        result.textContent = "該当する学番が見つかりませんでした。";
+        result.className = "error";
+      } else if (data.error) {
+        result.textContent = "エラーが発生しました。";
+        result.className = "error";
+      } else {
+        result.textContent =
+          "氏名：" + data.name + "\n" +
+          "欠席回数：" + data.absent + " 回";
+        result.className = "";
+      }
+    } catch (err) {
+      result.textContent = "通信エラーが発生しました。時間をおいて再度お試しください。";
+      result.className = "error";
+    } finally {
+      btn.disabled = false;
+    }
+  }
+
+  btn.addEventListener("click", search);
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") search();
+  });
+</script>
+</body>
+</html>
