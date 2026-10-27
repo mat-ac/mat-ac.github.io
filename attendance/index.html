@@ -84,7 +84,7 @@
       const data = await res.json();
 
       if (data.error === "not found") {
-        result.textContent = "該当する学番が見つかりませんでした。";
+        result.textContent = "該当する学生番号が見つかりませんでした。";
         result.className = "error";
       } else if (data.error) {
         result.textContent = "エラーが発生しました。";
