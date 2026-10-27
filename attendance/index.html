@@ -95,6 +95,7 @@
           "氏名：" + data.name + "\n" +
           "欠席回数：" + data.absent + " 回";
         result.className = "";
+       <h2>＃なお、欠席が5回以上となった場合、ゼミの成績評価を1ランク下げることがある。</h2>;   
       }
     } catch (err) {
       result.textContent = "通信エラーが発生しました。時間をおいて再度お試しください。";
@@ -109,6 +110,5 @@
     if (e.key === "Enter") search();
   });
 </script>
-  <h2>＃なお、欠席が5回以上となった場合、ゼミの成績評価を1ランク下げることがある。</h2>
 </body>
 </html>
