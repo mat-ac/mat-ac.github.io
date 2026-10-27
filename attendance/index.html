@@ -91,11 +91,11 @@
         result.textContent = "エラーが発生しました。";
         result.className = "error";
       } else {
-        result.textContent =
-          "氏名：" + data.name + "\n" +
-          "欠席回数：" + data.absent + " 回";
-        result.className = "";
-       <h2>＃なお、欠席が5回以上となった場合、ゼミの成績評価を1ランク下げることがある。</h2>;   
+        result.innerHTML =
+        "氏名：" + data.name + "<br>" +
+        "欠席回数：" + data.absent + " 回" +
+        "<h2>＃なお、欠席が5回以上となった場合、ゼミの成績評価を1ランク下げることがある。</h2>";
+        result.className = ""; 
       }
     } catch (err) {
       result.textContent = "通信エラーが発生しました。時間をおいて再度お試しください。";
